@@ -1,9 +1,13 @@
 ﻿using System;
 
-public class NikeShoe : ShoeDecorator
+namespace Decorator
 {
-    public override string MakeShoe() 
+    public class NikeShoe : ShoeDecorator
     {
-        return "Nike Shoes.";
+        public NikeShoe(IShoe shoe) : base(shoe) { }
+        public override string MakeShoe()
+        {
+            return "Nike Shoes.";
+        }
     }
 }

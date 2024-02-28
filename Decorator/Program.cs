@@ -1,17 +1,18 @@
-﻿using System;
-
-public class Program
+﻿namespace Decorator
 {
-    public static void Main(string[] args)
+    public class Program
     {
-		IShoe shoe = new PlainShoe();
-		shoe.MakeShoe();
+        public static void Main(string[] args)
+        {
+            IShoe shoe = new PlainShoe();
+            Console.WriteLine(shoe.MakeShoe());
 
-		shoe = new NikeShoe();
-		shoe.MakeShoe();
+            shoe = new NikeShoe(shoe);
+            Console.WriteLine(shoe.MakeShoe());
 
-		shoe = new PumaShoe();
-		shoe.MakeShoe();
-	}
-	
+            shoe = new PumaShoe(shoe);
+            Console.WriteLine(shoe.MakeShoe());
+        }
+
+    }
 }

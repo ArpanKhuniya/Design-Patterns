@@ -1,6 +1,7 @@
 ﻿using System;
 
-public class PlainShoe : IShoe
+namespace Decorator
+{public class PlainShoe : IShoe
 {
     public string MakeShoe()
     {
@@ -8,4 +9,5 @@ public class PlainShoe : IShoe
 
     }
 
+}
 }

@@ -1,6 +1,9 @@
 ﻿using System;
 
-public inteface IShoe
+namespace Decorator
 {
+    public interface IShoe
+    {
 	string MakeShoe();
+    }
 }
